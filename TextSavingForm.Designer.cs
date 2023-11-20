@@ -85,6 +85,7 @@
             this.saveButton.TabIndex = 4;
             this.saveButton.Text = "SAVE";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // addDateTimeButton
             // 
@@ -118,6 +119,7 @@
             this.editTextFileButton.TabIndex = 7;
             this.editTextFileButton.Text = "Edit Text File";
             this.editTextFileButton.UseVisualStyleBackColor = true;
+            this.editTextFileButton.Click += new System.EventHandler(this.editTextFileButton_Click);
             // 
             // TextSavingForm
             // 

@@ -33,7 +33,7 @@ namespace FinalProject
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void startAppButton_Click(object sender, EventArgs e)
         {
             // Create an instance of TextSavingForm
             TextSavingForm textSavingForm = new TextSavingForm();
