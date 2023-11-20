@@ -15,6 +15,9 @@ namespace FinalProject
         public TextSavingForm()
         {
             InitializeComponent();
+            this.MinimumSize = new Size(900, 700);
+            // Set an appropriate StartPosition (e.g., CenterScreen or Manual)
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         
@@ -136,5 +139,75 @@ namespace FinalProject
                 }
             }
         }
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+            // Initialize a counter variable
+            int controlNumber = 1;
+
+            // Iterate through all controls on the form
+            foreach (Control control in Controls)
+            {
+                // Display information based on the type of control
+                if (control is Button)
+                {
+                    // For buttons, display name, associated functionality, and description
+                    DisplayControlInformation($"Button {controlNumber}", control, GetButtonFunctionality(control));
+                }
+                else if (control is TextBox)
+                {
+                    // For text boxes, display name, type, and any specific information
+                    DisplayControlInformation($"TextBox {controlNumber}", control, "Accepts user input for text");
+                }
+                // Add more conditions for other types of controls as needed
+
+                // Increment the control number for the next iteration
+                controlNumber++;
+            }
+        }
+
+        // Helper method to display information about a control in a message box
+        private void DisplayControlInformation(string controlType, Control control, string description)
+        {
+            // Get the control's name
+            string controlName = control.Name;
+
+            // Display the information in a message box with the control type, name, description, and additional details
+            MessageBox.Show($"{controlType}: {controlName} - Type: {control.GetType().Name}\nDescription: {description}",
+                            "Control Information",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+        }
+
+        // Helper method to get the functionality associated with a button
+        // Helper method to get the functionality associated with a button
+        private string GetButtonFunctionality(Control button)
+        {
+            // You can customize this method based on how you've implemented the functionality for each button
+            switch (button.Name)
+            {
+                case "addDateTimeButton":
+                    return "Adds current user and date information to the description";
+
+                case "quitButton":
+                    return "Closes the form";
+
+                case "saveButton":
+                    return "Saves the content (title and description) to a text file";
+
+                case "editTextFileButton":
+                    return "Imports text content from a selected text file";
+
+                case "helpButton":
+                    return "Displays information about each control on the form";
+
+                // Add more cases for other buttons as needed
+
+                default:
+                    return "Functionality not specified for this button";
+            }
+        }
+
+
     }
 }

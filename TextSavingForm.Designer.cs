@@ -36,6 +36,7 @@
             this.addDateTimeButton = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
             this.editTextFileButton = new System.Windows.Forms.Button();
+            this.helpButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleOfTextBox
@@ -121,6 +122,16 @@
             this.editTextFileButton.UseVisualStyleBackColor = true;
             this.editTextFileButton.Click += new System.EventHandler(this.editTextFileButton_Click);
             // 
+            // helpButton
+            // 
+            this.helpButton.Location = new System.Drawing.Point(1044, 17);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Size = new System.Drawing.Size(159, 53);
+            this.helpButton.TabIndex = 8;
+            this.helpButton.Text = "help";
+            this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
+            // 
             // TextSavingForm
             // 
             this.AcceptButton = this.saveButton;
@@ -128,6 +139,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.quitButton;
             this.ClientSize = new System.Drawing.Size(1215, 734);
+            this.Controls.Add(this.helpButton);
             this.Controls.Add(this.editTextFileButton);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.addDateTimeButton);
@@ -153,5 +165,6 @@
         private System.Windows.Forms.Button addDateTimeButton;
         private System.Windows.Forms.Button quitButton;
         private System.Windows.Forms.Button editTextFileButton;
+        private System.Windows.Forms.Button helpButton;
     }
 }
