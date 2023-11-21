@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FinalProject
 {
@@ -15,20 +16,13 @@ namespace FinalProject
         public TextSavingForm()
         {
             InitializeComponent();
+            formatChoosingBox.Items.Add("default");
+            formatChoosingBox.Items.Add("practical");
+            formatChoosingBox.Items.Add("something unique");
             this.MinimumSize = new Size(900, 700);
             // Set an appropriate StartPosition (e.g., CenterScreen or Manual)
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-
-        
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private void addDateTimeButton_Click(object sender, EventArgs e)
         {
             // Get the content from the title box and description box
@@ -55,9 +49,18 @@ namespace FinalProject
 
         private void quitButton_Click(object sender, EventArgs e)
         {
-            // Close the form if the user clicks "Yes"
-            this.Close();
+            try
+            {
+                // Close the form if the user clicks "Yes"
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception here, for example, show an error message
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
         private void saveButton_Click(object sender, EventArgs e)
         {
@@ -149,37 +152,45 @@ namespace FinalProject
             foreach (Control control in Controls)
             {
                 // Display information based on the type of control
-                if (control is Button)
+                if (control is System.Windows.Forms.Button)
                 {
                     // For buttons, display name, associated functionality, and description
-                    DisplayControlInformation($"Button {controlNumber}", control, GetButtonFunctionality(control));
+                    DisplayControlInformation($"Button", control, GetButtonFunctionality(control), controlNumber);
                 }
-                else if (control is TextBox)
+                else if (control is System.Windows.Forms.TextBox)
                 {
                     // For text boxes, display name, type, and any specific information
-                    DisplayControlInformation($"TextBox {controlNumber}", control, "Accepts user input for text");
+                    DisplayControlInformation($"TextBox", control, "Accepts user input for text", controlNumber);
+                }
+                else if (control is System.Windows.Forms.ComboBox)
+                {
+                    // For comboBox, display name, type, and any specific information
+                    DisplayControlInformation($"ComboBox", control, "Allows the selection of different drawing styles", controlNumber);
                 }
                 // Add more conditions for other types of controls as needed
 
                 // Increment the control number for the next iteration
                 controlNumber++;
             }
+
+            MessageBox.Show("esc key will close this form, and enter key will save the text file.");
         }
 
-        // Helper method to display information about a control in a message box
-        private void DisplayControlInformation(string controlType, Control control, string description)
+        // Updated DisplayControlInformation method to handle ComboBox separately
+        private void DisplayControlInformation(string controlType, Control control, string description, int controlNumber)
         {
             // Get the control's name
             string controlName = control.Name;
 
             // Display the information in a message box with the control type, name, description, and additional details
-            MessageBox.Show($"{controlType}: {controlName} - Type: {control.GetType().Name}\nDescription: {description}",
+            MessageBox.Show($"{controlNumber}. {controlType}: {controlName} - Type: {control.GetType().Name}\nDescription: {description}",
                             "Control Information",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
         }
 
-        // Helper method to get the functionality associated with a button
+
+
         // Helper method to get the functionality associated with a button
         private string GetButtonFunctionality(Control button)
         {
@@ -187,27 +198,94 @@ namespace FinalProject
             switch (button.Name)
             {
                 case "addDateTimeButton":
-                    return "Adds current user and date information to the description";
+                    return "Adds the current user's name and date/time information to the description box.";
 
                 case "quitButton":
-                    return "Closes the form";
+                    return "Closes the form.";
 
                 case "saveButton":
-                    return "Saves the content (title and description) to a text file";
+                    return "Saves the content (title and description) to a text file. The title is used as the filename.";
 
                 case "editTextFileButton":
-                    return "Imports text content from a selected text file";
+                    return "Imports text content from a selected text file. The title is set to the filename without extension.";
 
                 case "helpButton":
-                    return "Displays information about each control on the form";
+                    return "Displays information about each control on the form in a message box. Pressing the 'esc' key will close this form, and the 'enter' key will save the text file.";
+
+                case "addStartingFormat":
+                    return "Generates a fancy drawing based on symbols and sets it as the content of the description box. The drawing style is chosen from the comboBox1 selection.";
 
                 // Add more cases for other buttons as needed
-
                 default:
                     return "Functionality not specified for this button";
             }
         }
 
 
+        private void TextSavingForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addStartingFormat_Click(object sender, EventArgs e)
+        {
+            // Call the method to generate a fancy drawing based on symbols
+            string fancyDrawing = GenerateFancyDrawing();
+
+            // Set the description text to the generated fancy drawing
+            descriptionOfTextBox.Text = fancyDrawing;
+        }
+
+        
+        // Helper method to generate a fancy drawing based on symbols
+        private string GenerateFancyDrawing()
+        {
+            StringBuilder drawing = new StringBuilder();
+
+            // Get the selected item from comboBox1
+            string comboBoxSelection = formatChoosingBox.SelectedItem as string;
+
+            // Add lines of symbols to create a fancy drawing based on comboBox1 choice
+            switch (comboBoxSelection)
+            {
+                case "default":
+                    drawing.AppendLine("Default drawing:");
+                    drawing.AppendLine("*****************");
+                    drawing.AppendLine("*               *");
+                    drawing.AppendLine("*  Fancy Text   *");
+                    drawing.AppendLine("*               *");
+                    drawing.AppendLine("*****************");
+                    break;
+
+                case "practical":
+                    drawing.AppendLine("Practical drawing:");
+                    drawing.AppendLine("-----------------");
+                    drawing.AppendLine("|               |");
+                    drawing.AppendLine("|  User's Note  |");
+                    drawing.AppendLine("|               |");
+                    drawing.AppendLine("-----------------");
+                    break;
+
+                case "something unique":
+                    drawing.AppendLine("Something Unique drawing:");
+                    drawing.AppendLine("@@@@@@@@@@@@@@@@@@@");
+                    drawing.AppendLine("@   Unique Note   @");
+                    drawing.AppendLine("@@@@@@@@@@@@@@@@@@@");
+                    break;
+
+                // Add more cases for other comboBox1 items as needed
+
+                default:
+                    drawing.AppendLine("No drawing selected");
+                    break;
+            }
+            return drawing.ToString();
+        }
+
+
+        private void formatChoosingBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.startAppButton = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.helpButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startAppButton
@@ -43,32 +43,33 @@
             this.startAppButton.UseVisualStyleBackColor = true;
             this.startAppButton.Click += new System.EventHandler(this.startAppButton_Click);
             // 
-            // comboBox1
+            // helpButton
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(568, 160);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 32);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.helpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.helpButton.Location = new System.Drawing.Point(1221, 13);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Size = new System.Drawing.Size(221, 74);
+            this.helpButton.TabIndex = 5;
+            this.helpButton.Text = "help";
+            this.helpButton.UseVisualStyleBackColor = true;
             // 
             // UltimateApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1454, 785);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.helpButton);
             this.Controls.Add(this.startAppButton);
             this.Name = "UltimateApp";
             this.Text = "Ultimate App Launcher";
+            this.Load += new System.EventHandler(this.UltimateApp_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Button startAppButton;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button helpButton;
     }
 }
 

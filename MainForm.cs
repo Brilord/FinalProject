@@ -15,17 +15,6 @@ namespace FinalProject
         public UltimateApp()
         {
             InitializeComponent();
-            // Add items to the ComboBox
-            comboBox1.Items.Add("Option 1");
-            comboBox1.Items.Add("Option 2");
-            comboBox1.Items.Add("Option 3");
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            // Handle the dropdown change event here
-            string selectedItem = comboBox1.SelectedItem.ToString();
-            MessageBox.Show("Selected item: " + selectedItem);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -37,10 +26,13 @@ namespace FinalProject
         {
             // Create an instance of TextSavingForm
             TextSavingForm textSavingForm = new TextSavingForm();
-
             // Show the form
             textSavingForm.Show();
         }
 
+        private void UltimateApp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,10 +37,13 @@
             this.quitButton = new System.Windows.Forms.Button();
             this.editTextFileButton = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
+            this.addStartingFormat = new System.Windows.Forms.Button();
+            this.formatChoosingBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // titleOfTextBox
             // 
+            this.titleOfTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.titleOfTextBox.Location = new System.Drawing.Point(31, 47);
             this.titleOfTextBox.Name = "titleOfTextBox";
             this.titleOfTextBox.Size = new System.Drawing.Size(747, 35);
@@ -51,6 +54,7 @@
             // 
             this.descriptionOfTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.descriptionOfTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.descriptionOfTextBox.Location = new System.Drawing.Point(31, 129);
             this.descriptionOfTextBox.Multiline = true;
             this.descriptionOfTextBox.Name = "descriptionOfTextBox";
@@ -75,46 +79,47 @@
             this.label2.Size = new System.Drawing.Size(201, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "description of text";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // saveButton
             // 
             this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.saveButton.BackColor = System.Drawing.Color.Lime;
             this.saveButton.Location = new System.Drawing.Point(1011, 646);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(192, 76);
             this.saveButton.TabIndex = 4;
             this.saveButton.Text = "SAVE";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // addDateTimeButton
             // 
             this.addDateTimeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.addDateTimeButton.Location = new System.Drawing.Point(1007, 556);
+            this.addDateTimeButton.Location = new System.Drawing.Point(1011, 561);
             this.addDateTimeButton.Name = "addDateTimeButton";
             this.addDateTimeButton.Size = new System.Drawing.Size(196, 70);
             this.addDateTimeButton.TabIndex = 5;
-            this.addDateTimeButton.Text = "Add date time";
+            this.addDateTimeButton.Text = "Add date time username";
             this.addDateTimeButton.UseVisualStyleBackColor = true;
             this.addDateTimeButton.Click += new System.EventHandler(this.addDateTimeButton_Click);
             // 
             // quitButton
             // 
             this.quitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.quitButton.BackColor = System.Drawing.Color.Red;
             this.quitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.quitButton.Location = new System.Drawing.Point(1007, 462);
+            this.quitButton.Location = new System.Drawing.Point(1011, 485);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(196, 70);
             this.quitButton.TabIndex = 6;
             this.quitButton.Text = "quit";
-            this.quitButton.UseVisualStyleBackColor = true;
+            this.quitButton.UseVisualStyleBackColor = false;
             this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
             // 
             // editTextFileButton
             // 
             this.editTextFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.editTextFileButton.Location = new System.Drawing.Point(1007, 381);
+            this.editTextFileButton.Location = new System.Drawing.Point(1007, 413);
             this.editTextFileButton.Name = "editTextFileButton";
             this.editTextFileButton.Size = new System.Drawing.Size(196, 66);
             this.editTextFileButton.TabIndex = 7;
@@ -124,21 +129,46 @@
             // 
             // helpButton
             // 
-            this.helpButton.Location = new System.Drawing.Point(1044, 17);
+            this.helpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.helpButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.helpButton.Location = new System.Drawing.Point(1007, 17);
             this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(159, 53);
+            this.helpButton.Size = new System.Drawing.Size(196, 53);
             this.helpButton.TabIndex = 8;
             this.helpButton.Text = "help";
             this.helpButton.UseVisualStyleBackColor = true;
             this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
             // 
+            // addStartingFormat
+            // 
+            this.addStartingFormat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.addStartingFormat.Location = new System.Drawing.Point(1011, 289);
+            this.addStartingFormat.Name = "addStartingFormat";
+            this.addStartingFormat.Size = new System.Drawing.Size(196, 118);
+            this.addStartingFormat.TabIndex = 9;
+            this.addStartingFormat.Text = "Add Fancy Text Format";
+            this.addStartingFormat.UseVisualStyleBackColor = true;
+            this.addStartingFormat.Click += new System.EventHandler(this.addStartingFormat_Click);
+            // 
+            // formatChoosingBox
+            // 
+            this.formatChoosingBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.formatChoosingBox.FormattingEnabled = true;
+            this.formatChoosingBox.Location = new System.Drawing.Point(1011, 76);
+            this.formatChoosingBox.Name = "formatChoosingBox";
+            this.formatChoosingBox.Size = new System.Drawing.Size(192, 32);
+            this.formatChoosingBox.TabIndex = 10;
+            this.formatChoosingBox.SelectedIndexChanged += new System.EventHandler(this.formatChoosingBox_SelectedIndexChanged);
+            // 
             // TextSavingForm
             // 
-            this.AcceptButton = this.saveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CancelButton = this.quitButton;
             this.ClientSize = new System.Drawing.Size(1215, 734);
+            this.Controls.Add(this.formatChoosingBox);
+            this.Controls.Add(this.addStartingFormat);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.editTextFileButton);
             this.Controls.Add(this.quitButton);
@@ -150,6 +180,7 @@
             this.Controls.Add(this.titleOfTextBox);
             this.Name = "TextSavingForm";
             this.Text = "TextSaveApp";
+            this.Load += new System.EventHandler(this.TextSavingForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +197,7 @@
         private System.Windows.Forms.Button quitButton;
         private System.Windows.Forms.Button editTextFileButton;
         private System.Windows.Forms.Button helpButton;
+        private System.Windows.Forms.Button addStartingFormat;
+        private System.Windows.Forms.ComboBox formatChoosingBox;
     }
 }
