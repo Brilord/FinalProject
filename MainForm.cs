@@ -28,42 +28,9 @@ namespace FinalProject
 
             tipsList = new List<string>
             {
-                "Tip 1: This is the first tip.",
+                "Tip 1: press start to begin.",
                 "Tip 2: Here's another helpful tip.",
-                "Tip 1: When using the application, start by entering a meaningful title and " +
-                "detailed description in the respective text boxes. This information is crucial for" +
-                " saving and sharing your text file.",
-
-"Tip 2: Utilize the Add DateTime button to automatically append the current user's name " +
-"and date/time to the description. This feature is handy for timestamping your content."
-
-,"Tip 3: When saving your work, make use of the Save button. Ensure you choose an appropriate" +
-"" +
-" file name, and consider using the suggested file format options (e.g., .txt)."
-
-,"Tip 4: Need to work with an existing text file? Click the Edit Text File button to import " +
-"content from a selected text file. The title will be set to the filename without extension."
-
-,"Tip 5: Explore the Add Starting Format button to generate a visually " +
-"appealing drawing based on different styles. Customize the drawing by selecting a style from the dropdown menu."
-
-,"Tip 6: For additional guidance on using each feature, click the " +
-"Help button. It provides information about the functionality of each control on the form, " +
-"enhancing your understanding of the application."
-
-,"Tip 7: Take advantage of the minimum size property to ensure a consistent " +
-"and user-friendly form size, especially when working with larger amounts of text."
-
-,"Tip 8: If an error occurs, don't worry! The application includes error" +
-" handling to display informative messages. If you encounter any issues, refer to the error message for guidance."
-
-,"Tip 9: To enhance the user experience, consider incorporating visual" +
-" feedback upon successful actions, such as saving or importing a text file. This" +
-" helps users confirm that their actions were completed successfully."
-
-,"Tip 10: Remember, pressing the 'enter' key will save the text file, " +
-"and the 'esc' key will close the form. These keyboard shortcuts provide " +
-"convenient and efficient ways to interact with the application."
+                
 
                 // Add more tips as needed
             };
