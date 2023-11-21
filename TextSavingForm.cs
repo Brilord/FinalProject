@@ -287,5 +287,10 @@ namespace FinalProject
         {
 
         }
+
+        private void tipLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,6 +39,7 @@
             this.helpButton = new System.Windows.Forms.Button();
             this.addStartingFormat = new System.Windows.Forms.Button();
             this.formatChoosingBox = new System.Windows.Forms.ComboBox();
+            this.tipLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titleOfTextBox
@@ -160,6 +161,16 @@
             this.formatChoosingBox.TabIndex = 10;
             this.formatChoosingBox.SelectedIndexChanged += new System.EventHandler(this.formatChoosingBox_SelectedIndexChanged);
             // 
+            // tipLabel
+            // 
+            this.tipLabel.AutoSize = true;
+            this.tipLabel.Location = new System.Drawing.Point(1007, 129);
+            this.tipLabel.Name = "tipLabel";
+            this.tipLabel.Size = new System.Drawing.Size(90, 24);
+            this.tipLabel.TabIndex = 11;
+            this.tipLabel.Text = "tipLabel";
+            this.tipLabel.Click += new System.EventHandler(this.tipLabel_Click);
+            // 
             // TextSavingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
@@ -167,6 +178,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CancelButton = this.quitButton;
             this.ClientSize = new System.Drawing.Size(1215, 734);
+            this.Controls.Add(this.tipLabel);
             this.Controls.Add(this.formatChoosingBox);
             this.Controls.Add(this.addStartingFormat);
             this.Controls.Add(this.helpButton);
@@ -199,5 +211,6 @@
         private System.Windows.Forms.Button helpButton;
         private System.Windows.Forms.Button addStartingFormat;
         private System.Windows.Forms.ComboBox formatChoosingBox;
+        private System.Windows.Forms.Label tipLabel;
     }
 }
