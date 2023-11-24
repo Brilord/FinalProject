@@ -163,12 +163,12 @@
             // 
             // tipLabel
             // 
+            this.tipLabel.AllowDrop = true;
             this.tipLabel.AutoSize = true;
-            this.tipLabel.Location = new System.Drawing.Point(1007, 129);
+            this.tipLabel.Location = new System.Drawing.Point(186, 9);
             this.tipLabel.Name = "tipLabel";
-            this.tipLabel.Size = new System.Drawing.Size(90, 24);
+            this.tipLabel.Size = new System.Drawing.Size(0, 24);
             this.tipLabel.TabIndex = 11;
-            this.tipLabel.Text = "tipLabel";
             this.tipLabel.Click += new System.EventHandler(this.tipLabel_Click);
             // 
             // TextSavingForm

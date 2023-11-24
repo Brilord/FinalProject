@@ -11,8 +11,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FinalProject
 {
+    
     public partial class TextSavingForm : Form
     {
+
+        // Add a Timer field to the class
+        private Timer tipTimer;
+        private int tipIndex = 0;
         public TextSavingForm()
         {
             InitializeComponent();
@@ -22,7 +27,47 @@ namespace FinalProject
             this.MinimumSize = new Size(900, 700);
             // Set an appropriate StartPosition (e.g., CenterScreen or Manual)
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            // Initialize and start the timer for rotating tips
+            tipTimer = new Timer();
+            tipTimer.Interval = 3000; // Set the interval to 3 seconds
+            tipTimer.Tick += TipTimer_Tick;
+            
+
+            tipTimer.Start();
+            tipIndex = 0;
         }
+
+        private void TipTimer_Tick(object sender, EventArgs e)
+        {
+            // Call a method to update the tipLabel with a new tip
+            UpdateTipLabel();
+        }
+
+        private void UpdateTipLabel()
+        {
+            // Define an array of tips
+            string[] tips = {
+        "Tip 1: Press 'esc' to close the form.",
+        "Tip 2: Press 'enter' to save the text file.",
+        "Tip 3: Use 'add date time username' to add user and date information.",
+        "Tip 4: 'quit' closes the form.",
+        "Tip 5: 'SAVE' saves the content to a text file.",
+        "Tip 6: 'edit text file' imports text content from a file.",
+        "Tip 7: 'help' displays information about each control on the form.",
+        "Tip 8: 'add fancy text format' generates a fancy drawing for the description.",
+        // Add more tips as needed
+    };
+
+            // Update the tipLabel text
+            tipLabel.Text = tips[tipIndex];
+
+            // Increment the tip index for the next rotation or restart from 0
+            tipIndex = (tipIndex + 1) % tips.Length;
+        }
+
+        // Add a class-level variable to keep track of the tip index
+       
         private void addDateTimeButton_Click(object sender, EventArgs e)
         {
             // Get the content from the title box and description box
@@ -224,7 +269,8 @@ namespace FinalProject
 
         private void TextSavingForm_Load(object sender, EventArgs e)
         {
-
+            // Start with tip 1 when the form loads
+            tipIndex = 0;
         }
 
         private void addStartingFormat_Click(object sender, EventArgs e)
