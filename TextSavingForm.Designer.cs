@@ -45,9 +45,10 @@
             // titleOfTextBox
             // 
             this.titleOfTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.titleOfTextBox.Location = new System.Drawing.Point(31, 47);
+            this.titleOfTextBox.Location = new System.Drawing.Point(19, 31);
+            this.titleOfTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.titleOfTextBox.Name = "titleOfTextBox";
-            this.titleOfTextBox.Size = new System.Drawing.Size(747, 35);
+            this.titleOfTextBox.Size = new System.Drawing.Size(461, 22);
             this.titleOfTextBox.TabIndex = 0;
             this.titleOfTextBox.TextChanged += new System.EventHandler(this.titleOfTextBox_TextChanged);
             // 
@@ -56,28 +57,31 @@
             this.descriptionOfTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.descriptionOfTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.descriptionOfTextBox.Location = new System.Drawing.Point(31, 129);
+            this.descriptionOfTextBox.Location = new System.Drawing.Point(19, 86);
+            this.descriptionOfTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.descriptionOfTextBox.Multiline = true;
             this.descriptionOfTextBox.Name = "descriptionOfTextBox";
-            this.descriptionOfTextBox.Size = new System.Drawing.Size(747, 573);
+            this.descriptionOfTextBox.Size = new System.Drawing.Size(461, 383);
             this.descriptionOfTextBox.TabIndex = 1;
             this.descriptionOfTextBox.TextChanged += new System.EventHandler(this.descriptionOfTextBox_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 17);
+            this.label1.Location = new System.Drawing.Point(19, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 24);
+            this.label1.Size = new System.Drawing.Size(64, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "title of text";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 102);
+            this.label2.Location = new System.Drawing.Point(19, 68);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 24);
+            this.label2.Size = new System.Drawing.Size(110, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "description of text";
             // 
@@ -85,9 +89,10 @@
             // 
             this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.saveButton.BackColor = System.Drawing.Color.Lime;
-            this.saveButton.Location = new System.Drawing.Point(1011, 646);
+            this.saveButton.Location = new System.Drawing.Point(622, 431);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(192, 76);
+            this.saveButton.Size = new System.Drawing.Size(118, 51);
             this.saveButton.TabIndex = 4;
             this.saveButton.Text = "SAVE";
             this.saveButton.UseVisualStyleBackColor = false;
@@ -96,9 +101,10 @@
             // addDateTimeButton
             // 
             this.addDateTimeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.addDateTimeButton.Location = new System.Drawing.Point(1011, 561);
+            this.addDateTimeButton.Location = new System.Drawing.Point(622, 374);
+            this.addDateTimeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addDateTimeButton.Name = "addDateTimeButton";
-            this.addDateTimeButton.Size = new System.Drawing.Size(196, 70);
+            this.addDateTimeButton.Size = new System.Drawing.Size(121, 47);
             this.addDateTimeButton.TabIndex = 5;
             this.addDateTimeButton.Text = "Add date time username";
             this.addDateTimeButton.UseVisualStyleBackColor = true;
@@ -109,9 +115,10 @@
             this.quitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.quitButton.BackColor = System.Drawing.Color.Red;
             this.quitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.quitButton.Location = new System.Drawing.Point(1011, 485);
+            this.quitButton.Location = new System.Drawing.Point(622, 323);
+            this.quitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.quitButton.Name = "quitButton";
-            this.quitButton.Size = new System.Drawing.Size(196, 70);
+            this.quitButton.Size = new System.Drawing.Size(121, 47);
             this.quitButton.TabIndex = 6;
             this.quitButton.Text = "quit";
             this.quitButton.UseVisualStyleBackColor = false;
@@ -120,9 +127,10 @@
             // editTextFileButton
             // 
             this.editTextFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.editTextFileButton.Location = new System.Drawing.Point(1007, 413);
+            this.editTextFileButton.Location = new System.Drawing.Point(620, 275);
+            this.editTextFileButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.editTextFileButton.Name = "editTextFileButton";
-            this.editTextFileButton.Size = new System.Drawing.Size(196, 66);
+            this.editTextFileButton.Size = new System.Drawing.Size(121, 44);
             this.editTextFileButton.TabIndex = 7;
             this.editTextFileButton.Text = "Edit Text File";
             this.editTextFileButton.UseVisualStyleBackColor = true;
@@ -131,33 +139,38 @@
             // helpButton
             // 
             this.helpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.helpButton.BackColor = System.Drawing.SystemColors.ControlDark;
             this.helpButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.helpButton.Location = new System.Drawing.Point(1007, 17);
+            this.helpButton.Location = new System.Drawing.Point(620, 11);
+            this.helpButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(196, 53);
+            this.helpButton.Size = new System.Drawing.Size(121, 35);
             this.helpButton.TabIndex = 8;
             this.helpButton.Text = "help";
-            this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.UseVisualStyleBackColor = false;
             this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
             // 
             // addStartingFormat
             // 
             this.addStartingFormat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.addStartingFormat.Location = new System.Drawing.Point(1011, 289);
+            this.addStartingFormat.BackColor = System.Drawing.Color.Yellow;
+            this.addStartingFormat.Location = new System.Drawing.Point(622, 193);
+            this.addStartingFormat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addStartingFormat.Name = "addStartingFormat";
-            this.addStartingFormat.Size = new System.Drawing.Size(196, 118);
+            this.addStartingFormat.Size = new System.Drawing.Size(121, 79);
             this.addStartingFormat.TabIndex = 9;
             this.addStartingFormat.Text = "Add Fancy Text Format";
-            this.addStartingFormat.UseVisualStyleBackColor = true;
+            this.addStartingFormat.UseVisualStyleBackColor = false;
             this.addStartingFormat.Click += new System.EventHandler(this.addStartingFormat_Click);
             // 
             // formatChoosingBox
             // 
             this.formatChoosingBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.formatChoosingBox.FormattingEnabled = true;
-            this.formatChoosingBox.Location = new System.Drawing.Point(1011, 76);
+            this.formatChoosingBox.Location = new System.Drawing.Point(622, 51);
+            this.formatChoosingBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.formatChoosingBox.Name = "formatChoosingBox";
-            this.formatChoosingBox.Size = new System.Drawing.Size(192, 32);
+            this.formatChoosingBox.Size = new System.Drawing.Size(120, 24);
             this.formatChoosingBox.TabIndex = 10;
             this.formatChoosingBox.SelectedIndexChanged += new System.EventHandler(this.formatChoosingBox_SelectedIndexChanged);
             // 
@@ -165,19 +178,20 @@
             // 
             this.tipLabel.AllowDrop = true;
             this.tipLabel.AutoSize = true;
-            this.tipLabel.Location = new System.Drawing.Point(186, 9);
+            this.tipLabel.Location = new System.Drawing.Point(114, 6);
+            this.tipLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tipLabel.Name = "tipLabel";
-            this.tipLabel.Size = new System.Drawing.Size(0, 24);
+            this.tipLabel.Size = new System.Drawing.Size(0, 16);
             this.tipLabel.TabIndex = 11;
             this.tipLabel.Click += new System.EventHandler(this.tipLabel_Click);
             // 
             // TextSavingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CancelButton = this.quitButton;
-            this.ClientSize = new System.Drawing.Size(1215, 734);
+            this.ClientSize = new System.Drawing.Size(748, 489);
             this.Controls.Add(this.tipLabel);
             this.Controls.Add(this.formatChoosingBox);
             this.Controls.Add(this.addStartingFormat);
@@ -190,6 +204,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.descriptionOfTextBox);
             this.Controls.Add(this.titleOfTextBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TextSavingForm";
             this.Text = "TextSaveApp";
             this.Load += new System.EventHandler(this.TextSavingForm_Load);

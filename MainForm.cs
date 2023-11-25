@@ -13,9 +13,13 @@ namespace FinalProject
     public partial class UltimateApp : Form
     {
 
-        private Timer tipsTimer;
-        private List<string> tipsList;
-        private int currentTipIndex;
+        private Timer tipsTimer; // Timer for tips
+        private List<string> tipsList; // List of tips
+        private int currentTipIndex; // Index of the current tip
+
+        private Timer rainbowTimer; // Timer for rainbow colors
+        private int rainbowColorIndex; // Index of the current color in the rainbow sequence
+        private int colorTransitionSteps = 10; // Adjust the number of steps for smoother transition
 
         public UltimateApp()
         {
@@ -25,23 +29,28 @@ namespace FinalProject
             tipsTimer = new Timer();
             tipsTimer.Interval = 3000; // 5 seconds
             tipsTimer.Tick += TipsTimer_Tick;
-
             tipsList = new List<string>
             {
                 "Tip 1: press start to begin.",
                 "Tip 2: Here's another helpful tip.",
-                
-
                 // Add more tips as needed
             };
 
             currentTipIndex = 0;
 
             // Start the timer
-            tipsTimer.Start();
+            tipsTimer.Start(); // Start the timer
 
             // Show the first tip when the form is loaded
             tipLabel.Text = tipsList[currentTipIndex];
+
+            // Initialize the timer for rainbow colors
+            rainbowTimer = new Timer(); // Create a new timer
+            rainbowTimer.Interval = 300; // Set the interval (adjust as needed)
+            rainbowTimer.Tick += RainbowTimer_Tick; // Add the event handler
+
+            // Start the timer
+            rainbowTimer.Start();
         }
 
         private void TipsTimer_Tick(object sender, EventArgs e)
@@ -56,19 +65,54 @@ namespace FinalProject
 
         }
 
+        // Event handler for the rainbow timer
+        private void RainbowTimer_Tick(object sender, EventArgs e)
+        {
+            // Update the button color with the next color in the smoothly transitioning rainbow sequence
+            startAppButton.BackColor = GetSmoothRainbowColor();
+        }
+
+        // Helper method to get the next color in the smoothly transitioning rainbow sequence
+        private Color GetSmoothRainbowColor()
+        {
+            // Get the current and next colors in the rainbow sequence
+            Color[] rainbowColors = { Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Indigo, Color.Violet };
+            Color currentColor = rainbowColors[rainbowColorIndex];
+            Color nextColor = rainbowColors[(rainbowColorIndex + 1) % rainbowColors.Length];
+
+            // Calculate the step size for each color component
+            int stepSize = 255 / colorTransitionSteps;
+
+            // Calculate the next color with smoother transition
+            int nextRed = Math.Max(0, Math.Min(255, currentColor.R + stepSize));
+            int nextGreen = Math.Max(0, Math.Min(255, currentColor.G + stepSize));
+            int nextBlue = Math.Max(0, Math.Min(255, currentColor.B + stepSize));
+
+            // Create the next color
+            Color smoothNextColor = Color.FromArgb(nextRed, nextGreen, nextBlue);
+
+            // Increment the index for the next iteration
+            rainbowColorIndex = (rainbowColorIndex + 1) % rainbowColors.Length;
+
+            return smoothNextColor;
+        }
+        // Event handler for the startAppButton
         private void startAppButton_Click(object sender, EventArgs e)
         {
             // Create an instance of TextSavingForm
             TextSavingForm textSavingForm = new TextSavingForm();
+
             // Show the form
             textSavingForm.Show();
         }
+
 
         private void UltimateApp_Load(object sender, EventArgs e)
         {
 
         }
 
+        // Event handler for the helpButton
         private void helpButton_Click(object sender, EventArgs e)
         {
             // Initialize a counter variable
@@ -111,9 +155,6 @@ namespace FinalProject
 
                 case "helpButton":
                     return "Displays information about the different controls on the form.";
-
-                // Add more cases for other buttons as needed
-
                 default:
                     return "Functionality not specified.";
             }
@@ -137,7 +178,5 @@ namespace FinalProject
         {
 
         }
-    }
-    
-    
+    } 
 }

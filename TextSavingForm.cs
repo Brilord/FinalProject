@@ -11,13 +11,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FinalProject
 {
-    
     public partial class TextSavingForm : Form
     {
 
         // Add a Timer field to the class
         private Timer tipTimer;
         private int tipIndex = 0;
+        // this is the constructor for the text saving form
         public TextSavingForm()
         {
             InitializeComponent();
@@ -38,12 +38,14 @@ namespace FinalProject
             tipIndex = 0;
         }
 
+        // this method is for the timer tick
         private void TipTimer_Tick(object sender, EventArgs e)
         {
             // Call a method to update the tipLabel with a new tip
             UpdateTipLabel();
         }
 
+        // this method is for the update tip label
         private void UpdateTipLabel()
         {
             // Define an array of tips
@@ -66,8 +68,8 @@ namespace FinalProject
             tipIndex = (tipIndex + 1) % tips.Length;
         }
 
-        // Add a class-level variable to keep track of the tip index
-       
+        
+       // this method is for the enter key to save the text file
         private void addDateTimeButton_Click(object sender, EventArgs e)
         {
             // Get the content from the title box and description box
@@ -92,6 +94,7 @@ namespace FinalProject
 
         }
 
+        // this method is for the esc key to close the form
         private void quitButton_Click(object sender, EventArgs e)
         {
             try
@@ -106,7 +109,7 @@ namespace FinalProject
             }
         }
 
-
+        // this method is for the save button to save the text file
         private void saveButton_Click(object sender, EventArgs e)
         {
             // Get the content from the title box and description box
@@ -147,7 +150,7 @@ namespace FinalProject
                 }
             }
         }
-
+        // this method is for the edit text file button to import text content from a file
         private void editTextFileButton_Click(object sender, EventArgs e)
         {
             // Create an OpenFileDialog
@@ -188,10 +191,11 @@ namespace FinalProject
             }
         }
 
+        // this method is for the help button to display information about each control on the form
         private void helpButton_Click(object sender, EventArgs e)
         {
             // Initialize a counter variable
-            int controlNumber = 1;
+            int controlNumber = 0;
 
             // Iterate through all controls on the form
             foreach (Control control in Controls)
@@ -221,7 +225,7 @@ namespace FinalProject
             MessageBox.Show("esc key will close this form, and enter key will save the text file.");
         }
 
-        // Updated DisplayControlInformation method to handle ComboBox separately
+        // this method is for the display control information
         private void DisplayControlInformation(string controlType, Control control, string description, int controlNumber)
         {
             // Get the control's name
@@ -266,13 +270,14 @@ namespace FinalProject
             }
         }
 
-
+        // this method is for the text saving form to load
         private void TextSavingForm_Load(object sender, EventArgs e)
         {
             // Start with tip 1 when the form loads
             tipIndex = 0;
         }
 
+        // this method is for the add fancy text format button to generate a fancy drawing for the description
         private void addStartingFormat_Click(object sender, EventArgs e)
         {
             // Call the method to generate a fancy drawing based on symbols
