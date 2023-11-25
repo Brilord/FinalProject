@@ -99,12 +99,25 @@ namespace FinalProject
         // Event handler for the startAppButton
         private void startAppButton_Click(object sender, EventArgs e)
         {
-            // Create an instance of TextSavingForm
-            TextSavingForm textSavingForm = new TextSavingForm();
+            try
+            {
+                // Create an instance of TextSavingForm
+                TextSavingForm textSavingForm = new TextSavingForm();
 
-            // Show the form
-            textSavingForm.Show();
+                // Show the form
+                textSavingForm.Show();
+
+                // Play a success sound
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.ambient_piano_logo_165357);
+                player.Play();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error starting the application: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
 
         private void UltimateApp_Load(object sender, EventArgs e)
