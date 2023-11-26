@@ -92,5 +92,17 @@
   <ItemGroup>
     <None Include="Resources\ambient-piano-logo-165357.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opening-logo-164341.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interface-124464.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a-space-journey-through-the-solar-system-153272.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game-bonus-144751.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

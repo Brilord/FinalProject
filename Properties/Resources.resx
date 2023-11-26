@@ -121,4 +121,16 @@
   <data name="ambient_piano_logo_165357" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ambient-piano-logo-165357.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="a_space_journey_through_the_solar_system_153272" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a-space-journey-through-the-solar-system-153272.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="game_bonus_144751" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\game-bonus-144751.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="interface_124464" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\interface-124464.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="opening_logo_164341" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opening-logo-164341.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

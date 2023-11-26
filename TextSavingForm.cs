@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace FinalProject
         public TextSavingForm()
         {
             InitializeComponent();
+            
             formatChoosingBox.Items.Add("default");
             formatChoosingBox.Items.Add("practical");
             formatChoosingBox.Items.Add("something unique");
@@ -36,6 +38,7 @@ namespace FinalProject
 
             tipTimer.Start();
             tipIndex = 0;
+            formatChoosingBox.SelectedIndex = 0;
         }
 
         // this method is for the timer tick
@@ -82,6 +85,13 @@ namespace FinalProject
 
             // Append the user and date information to the existing description
             descriptionOfTextBox.Text = userAndDate + descriptionOfTextBox.Text;
+            
+
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.interface_124464);
+            player.Play();
+
+
+
         }
 
         private void descriptionOfTextBox_TextChanged(object sender, EventArgs e)
@@ -136,10 +146,13 @@ namespace FinalProject
                 try
                 {
                     // Write the content to the selected text file
-                    System.IO.File.WriteAllText(filePath, description);
+                    
+
+                    // Play the WAV file                    
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.opening_logo_164341);
+                    player.Play();
 
                     // Add the file path to the dataset
-
 
                     MessageBox.Show("Description saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
@@ -150,6 +163,7 @@ namespace FinalProject
                 }
             }
         }
+
         // this method is for the edit text file button to import text content from a file
         private void editTextFileButton_Click(object sender, EventArgs e)
         {
@@ -196,6 +210,9 @@ namespace FinalProject
         {
             // Initialize a counter variable
             int controlNumber = 0;
+            // Play the WAV file                    
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.game_bonus_144751);
+            player.Play();
 
             // Iterate through all controls on the form
             foreach (Control control in Controls)
@@ -221,7 +238,6 @@ namespace FinalProject
                 // Increment the control number for the next iteration
                 controlNumber++;
             }
-
             MessageBox.Show("esc key will close this form, and enter key will save the text file.");
         }
 
@@ -285,6 +301,9 @@ namespace FinalProject
 
             // Set the description text to the generated fancy drawing
             descriptionOfTextBox.Text = fancyDrawing;
+            // Play the WAV file                    
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.interface_124464);
+            player.Play();
         }
 
         

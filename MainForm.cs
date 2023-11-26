@@ -129,7 +129,10 @@ namespace FinalProject
         private void helpButton_Click(object sender, EventArgs e)
         {
             // Initialize a counter variable
-            int controlNumber = 1;
+            int controlNumber = 0;
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.ambient_piano_logo_165357);
+            player.Play();
+
 
             // Iterate through all controls on the form
             foreach (Control control in Controls)

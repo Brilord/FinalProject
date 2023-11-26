@@ -63,9 +63,45 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream a_space_journey_through_the_solar_system_153272 {
+            get {
+                return ResourceManager.GetStream("a_space_journey_through_the_solar_system_153272", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream ambient_piano_logo_165357 {
             get {
                 return ResourceManager.GetStream("ambient_piano_logo_165357", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream game_bonus_144751 {
+            get {
+                return ResourceManager.GetStream("game_bonus_144751", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream interface_124464 {
+            get {
+                return ResourceManager.GetStream("interface_124464", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream opening_logo_164341 {
+            get {
+                return ResourceManager.GetStream("opening_logo_164341", resourceCulture);
             }
         }
     }
